@@ -53,6 +53,10 @@ python dashboard.py
 
 Open [http://127.0.0.1:8080](http://127.0.0.1:8080) in your browser. The dashboard shows severity totals, recent risk scores, and expandable incident evidence. It binds to `127.0.0.1` by default and reads only local JSON files; it does not send data, block IPs, or perform containment actions. Press `Ctrl+C` in the terminal to stop it.
 
+### Dashboard preview
+
+![Sentinel Desk local SOC dashboard](assets/dashboard-preview.png)
+
 ## Analyze another local log file
 
 ```powershell
