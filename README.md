@@ -22,6 +22,7 @@ soc-incident-response/
 ├── detector.py           # repeated-failed-login detection
 ├── risk.py               # explainable risk score and severity
 ├── main.py               # command-line pipeline
+├── dashboard.py          # local browser dashboard for incident records
 ├── requirements.txt      # standard-library-only milestone
 └── README.md
 ```
@@ -41,6 +42,16 @@ The included synthetic data produces two local incidents:
 - `198.51.100.73`: three failed attempts against `root`, rated **medium**.
 
 Generated records use names such as `incidents/INC-20260911-AB12CD34.json` and contain the evidence, time window, risk reasons, and an analyst-oriented next step.
+
+## View the local dashboard
+
+After generating incidents, start the local browser dashboard:
+
+```powershell
+python dashboard.py
+```
+
+Open [http://127.0.0.1:8080](http://127.0.0.1:8080) in your browser. The dashboard shows severity totals, recent risk scores, and expandable incident evidence. It binds to `127.0.0.1` by default and reads only local JSON files; it does not send data, block IPs, or perform containment actions. Press `Ctrl+C` in the terminal to stop it.
 
 ## Analyze another local log file
 
